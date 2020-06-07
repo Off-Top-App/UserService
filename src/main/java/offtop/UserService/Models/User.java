@@ -1,4 +1,4 @@
-package offtop.getUserService.Models;
+package offtop.UserService.Models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

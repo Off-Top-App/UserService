@@ -1,10 +1,10 @@
-package offtop.getUserService.Service;
+package offtop.UserService.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import offtop.getUserService.Models.User;
-import offtop.getUserService.Repositories.UserRepository;
+import offtop.UserService.Models.User;
+import offtop.UserService.Repositories.UserRepository;
 
 @Service
 public class UserService{

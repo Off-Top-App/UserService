@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>offtop</groupId>
-	<artifactId>getUserService</artifactId>
+	<artifactId>UserService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>getUserService</name>
+	<name>UserService</name>
 	<description>Microservice used to get user information</description>
 
 	<properties>

@@ -12,7 +12,15 @@ public class UserService{
     @Autowired
     public UserRepository userRepository;
 
-    public User getUserService(String email){
+    public User getUserByEmail(String email){
         return userRepository.findByEmail(email).get(0);
+    }
+    
+    public User getUserById(int id){
+        return userRepository.findById(id);
+    }
+
+    public User insertUser(User user){
+        return userRepository.save(user);   
     }
 }

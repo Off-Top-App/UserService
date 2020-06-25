@@ -1,4 +1,4 @@
-package offtop.UserService.Service;
+package offtop.UserService.Services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,9 @@ public class UserService{
     }
     
     public User getUserById(int id){
-        return userRepository.findById(id);
+        User user = userRepository.findById(id);
+        System.out.println("age: " + user.getAge());
+        return user;
     }
 
     public User insertUser(User user){

@@ -144,4 +144,12 @@ public class User{
         this.deletedAt = deletedAt;
     }
 
+    @Override
+    public String toString() {
+        return "User [Id=" + Id + ", age=" + age + ", city=" + city + ", createdAt=" + createdAt + ", deletedAt="
+            + deletedAt + ", email=" + email + ", firstName=" + firstName + ", gender=" + gender + ", lastName="
+            + lastName + ", password=" + password + ", professional=" + professional + ", username=" + username
+            + "]";
+    }
+
 }

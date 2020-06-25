@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import offtop.UserService.Models.User;
-import offtop.UserService.Service.ProducerService;
-import offtop.UserService.Service.UserService;
+import offtop.UserService.Services.ProducerService;
+import offtop.UserService.Services.UserService;
 
 @RestController
 public class UserController{
@@ -34,13 +34,7 @@ public class UserController{
     @PostMapping(value ="/setUser")
     public User setUser (@RequestBody User user){
         User newUser = userService.insertUser(user);
-        System.out.println("***Created new!!!**");
         return newUser;
         
     }
-
-    // @GetMapping(value="/testProducer")
-    // public void testProducer(){
-    //     producerService.sendUserData();
-    // }
 }

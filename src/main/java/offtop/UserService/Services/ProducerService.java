@@ -1,4 +1,4 @@
-package offtop.UserService.Service;
+package offtop.UserService.Services;
 
 import org.slf4j.LoggerFactory;
 import org.apache.kafka.clients.producer.Producer;
@@ -16,13 +16,11 @@ public class ProducerService{
    private static final String TOPIC = "userDataResponse";
 
    @Autowired
-   UserService userService;
-
-   @Autowired
    private KafkaTemplate<String, User> kafkaTemplate;
 
 
-   public void sendUserData(User userData){ 
+   public void sendUserData(User userData){
+      System.out.println("BBBBAAARS");
       kafkaTemplate.send(TOPIC, userData);
       logger.info(String.format("Producing userDataResponse Event: -> %s", userData));
 

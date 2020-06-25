@@ -1,4 +1,4 @@
-package offtop.UserService.Service;
+package offtop.UserService.Services;
 
 import java.util.Map;
 
@@ -23,8 +23,8 @@ public class ConsumerService {
 
     @KafkaListener(topics = "requestUserData", groupId = "group_Id")
     public void handleUserDataRequest(String message) {
-        Map consumedData = messageParserService.parseMessage(message);
-        int userId = (int)consumedData.get("user_id");
+        Map<String, Double> consumedData = messageParserService.parseMessage(message);
+        int userId = consumedData.get("user_id").intValue();
         User user = userService.getUserById(userId);
         producerService.sendUserData(user);
     }

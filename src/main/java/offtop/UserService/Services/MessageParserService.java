@@ -13,5 +13,4 @@ public class MessageParserService{
         Map<String, Double> value = new Gson().fromJson(message, Map.class);
         return value;
     }
-
 }

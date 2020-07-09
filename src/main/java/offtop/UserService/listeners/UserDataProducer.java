@@ -1,4 +1,4 @@
-package offtop.UserService.Services;
+package offtop.UserService.Listeners;
 
 import java.util.*;
 import org.slf4j.LoggerFactory;
@@ -13,7 +13,7 @@ import offtop.UserService.Models.User;
 @Service
 public class UserDataProducer{
 
-   private static final Logger logger = LoggerFactory.getLogger(ProducerService.class);
+   private static final Logger logger = LoggerFactory.getLogger(UserDataProducer.class);
    private static final String TOPIC = "AllUserDataResponse";
 
    @Autowired

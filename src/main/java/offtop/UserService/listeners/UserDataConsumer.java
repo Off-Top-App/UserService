@@ -10,11 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
+import offtop.UserService.Services.UserService;
 import offtop.UserService.Models.User;
+import offtop.UserService.Listeners.UserDataProducer;
 
 @Service
 public class UserDataConsumer {
-    private final Logger logger = LoggerFactory.getLogger(ConsumerService.class);
+    private final Logger logger = LoggerFactory.getLogger(UserDataConsumer.class);
 
     @Autowired
     UserService userService;

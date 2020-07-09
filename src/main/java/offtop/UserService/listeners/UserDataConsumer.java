@@ -1,4 +1,4 @@
-package offtop.UserService.Services;
+package offtop.UserService.Listeners;
 
 import java.util.Map;
 
@@ -26,8 +26,8 @@ public class UserDataConsumer {
 
     @KafkaListener(topics = "requestAllUserData", groupId = "group_Id")
     public void handleAllUsersDataRequest(String message) {
+      logger.info(String.format("#### -> Consumed message -> %s", message));
       List<User> allUsers = userService.getAllUsers();
       userDataProducer.sendAllUserData(allUsers);
-      logger.info(String.format("#### -> Consumed message -> %s", message));
     }
 }

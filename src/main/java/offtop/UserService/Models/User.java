@@ -1,5 +1,6 @@
 package offtop.UserService.Models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,17 +13,16 @@ public class User{
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public int Id;
+    public int id;
 
     public String firstName;
     public String lastName;
     public String city;
     public int age;
     public String gender;
-    public String professional;
+    public String profession;
     public String email;
     public String username;
-    public String password;
     public String createdAt;
     public String deletedAt;
 
@@ -31,29 +31,28 @@ public class User{
     }
 
     public User (int Id, String firstName, String lastName, String city, int age, String gender, String professional,
-     String email, String username, String password, String createdAt, String deletedAt ){
+     String email, String username, String createdAt, String deletedAt ){
       
         super();
-        this.Id = Id;
+        this.id = Id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.city = city;
         this.age = age;
         this.gender = gender;
-        this.professional = professional;
+        this.profession = professional;
         this.email = email;
         this.username = username;
-        this.password = password;
         this.createdAt = createdAt;
         this.deletedAt = deletedAt;
      }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -97,11 +96,11 @@ public class User{
     }
 
     public String getProfessional() {
-        return professional;
+        return profession;
     }
 
     public void setProfessional(String professional) {
-        this.professional = professional;
+        this.profession = professional;
     }
 
     public String getEmail() {
@@ -118,14 +117,6 @@ public class User{
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getCreatedAt() {
@@ -146,9 +137,9 @@ public class User{
 
     @Override
     public String toString() {
-        return "User [Id=" + Id + ", age=" + age + ", city=" + city + ", createdAt=" + createdAt + ", deletedAt="
+        return "User [id=" + id + ", age=" + age + ", city=" + city + ", createdAt=" + createdAt + ", deletedAt="
             + deletedAt + ", email=" + email + ", firstName=" + firstName + ", gender=" + gender + ", lastName="
-            + lastName + ", password=" + password + ", professional=" + professional + ", username=" + username
+            + lastName + ", profession=" + profession + ", username=" + username
             + "]";
     }
 

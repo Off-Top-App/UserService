@@ -20,7 +20,6 @@ public class ProducerService{
 
 
    public void sendUserData(User userData){
-      System.out.println("BBBBAAARS");
       kafkaTemplate.send(TOPIC, userData);
       logger.info(String.format("Producing userDataResponse Event: -> %s", userData));
 

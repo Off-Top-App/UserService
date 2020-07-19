@@ -18,10 +18,8 @@ public class ProducerService{
    @Autowired
    private KafkaTemplate<String, User> kafkaTemplate;
 
-
    public void sendUserData(User userData){
+      logger.info("Producing userDataResponse Event");
       kafkaTemplate.send(TOPIC, userData);
-      logger.info(String.format("Producing userDataResponse Event: -> %s", userData));
-
    }
 }

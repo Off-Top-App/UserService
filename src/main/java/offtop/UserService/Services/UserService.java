@@ -20,11 +20,9 @@ public class UserService{
 
     public User getUserById(int id){
         User user = userRepository.findById(id);
-        System.out.println("age: " + user.getAge());
         return user;
     }
 
-    //retrieve from db
     public List<User> getAllUsers(){
       return userRepository.findAll();
     }

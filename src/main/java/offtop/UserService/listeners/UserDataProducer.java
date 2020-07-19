@@ -19,7 +19,7 @@ public class UserDataProducer{
    @Autowired
    private KafkaTemplate<String, List<User>> kafkaUserTemplate;
    public void sendAllUserData(List<User> userData){
+      logger.info("Producing userDataResponse Event");
       kafkaUserTemplate.send(TOPIC, userData);
-      logger.info(String.format("Producing userDataResponse Event: -> %s", userData));
    }
 }

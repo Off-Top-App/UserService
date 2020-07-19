@@ -10,12 +10,12 @@ import offtop.UserService.Models.User;
 // CRUD refers Create, Read, Update, Delete
 @Repository
 public interface UserRepository extends CrudRepository<User,Integer>{
-    
+
     List<User> findByEmail(String email);
 
     User findById(int id);
 
-    
+    List<User> findAll();
+
+
 }
-
-

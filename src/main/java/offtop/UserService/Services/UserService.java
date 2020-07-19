@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import offtop.UserService.Models.User;
 import offtop.UserService.Repositories.UserRepository;
 
+import java.util.*;
+
 @Service
 public class UserService{
 
@@ -15,14 +17,17 @@ public class UserService{
     public User getUserByEmail(String email){
         return userRepository.findByEmail(email).get(0);
     }
-    
+
     public User getUserById(int id){
         User user = userRepository.findById(id);
-        System.out.println("age: " + user.getAge());
         return user;
     }
 
+    public List<User> getAllUsers(){
+      return userRepository.findAll();
+    }
+
     public User insertUser(User user){
-        return userRepository.save(user);   
+        return userRepository.save(user);
     }
 }

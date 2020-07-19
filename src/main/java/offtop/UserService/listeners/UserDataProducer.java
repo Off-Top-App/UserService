@@ -1,8 +1,7 @@
 package offtop.UserService.Listeners;
 
-import java.util.*;
+import java.util.List;
 import org.slf4j.LoggerFactory;
-import org.apache.kafka.clients.producer.Producer;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;

@@ -12,64 +12,59 @@ public class User{
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public int Id;
+    public int id;
 
-    public String firstName;
-    public String lastName;
+    public String first_name;
+    public String last_name;
     public String city;
     public int age;
     public String gender;
-    public String professional;
+    public String profession;
     public String email;
     public String username;
-    public String password;
-    public String createdAt;
-    public String deletedAt;
+    public String created_at;
+    public String deleted_at;
 
-    public User(){
-        super();
+    public User() {
     }
 
-    public User (int Id, String firstName, String lastName, String city, int age, String gender, String professional,
-     String email, String username, String password, String createdAt, String deletedAt ){
-      
-        super();
-        this.Id = Id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public User(int id, String first_name, String last_name, String city, int age, String gender, String profession,
+            String email, String username, String created_at, String deleted_at) {
+        this.id = id;
+        this.first_name = first_name;
+        this.last_name = last_name;
         this.city = city;
         this.age = age;
         this.gender = gender;
-        this.professional = professional;
+        this.profession = profession;
         this.email = email;
         this.username = username;
-        this.password = password;
-        this.createdAt = createdAt;
-        this.deletedAt = deletedAt;
-     }
+        this.created_at = created_at;
+        this.deleted_at = deleted_at;
+    }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirst_name() {
+        return first_name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLast_name() {
+        return last_name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
 
     public String getCity() {
@@ -96,12 +91,12 @@ public class User{
         this.gender = gender;
     }
 
-    public String getProfessional() {
-        return professional;
+    public String getProfession() {
+        return profession;
     }
 
-    public void setProfessional(String professional) {
-        this.professional = professional;
+    public void setProfession(String profession) {
+        this.profession = profession;
     }
 
     public String getEmail() {
@@ -120,36 +115,28 @@ public class User{
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getCreated_at() {
+        return created_at;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setCreated_at(String created_at) {
+        this.created_at = created_at;
     }
 
-    public String getCreatedAt() {
-        return createdAt;
+    public String getDeleted_at() {
+        return deleted_at;
     }
 
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public String getDeletedAt() {
-        return deletedAt;
-    }
-
-    public void setDeletedAt(String deletedAt) {
-        this.deletedAt = deletedAt;
+    public void setDeleted_at(String deleted_at) {
+        this.deleted_at = deleted_at;
     }
 
     @Override
     public String toString() {
-        return "User [Id=" + Id + ", age=" + age + ", city=" + city + ", createdAt=" + createdAt + ", deletedAt="
-            + deletedAt + ", email=" + email + ", firstName=" + firstName + ", gender=" + gender + ", lastName="
-            + lastName + ", password=" + password + ", professional=" + professional + ", username=" + username
-            + "]";
+        return "User [age=" + age + ", city=" + city + ", created_at=" + created_at + ", deleted_at=" + deleted_at
+                + ", email=" + email + ", first_name=" + first_name + ", gender=" + gender + ", id=" + id
+                + ", last_name=" + last_name + ", profession=" + profession + ", username=" + username + "]";
     }
 
+    
 }
